@@ -1,0 +1,29 @@
+## Best Performing Configuration
+
+•⁠  ⁠Model: ResNet-18 Autoencoder
+•⁠  ⁠Seed: 82
+•⁠  ⁠Input: Single RGB frame (128×128)
+•⁠  ⁠Inference: Test-Time Augmentation (flip + rotation)
+•⁠  ⁠Metric: Average Precision (AP)
+•⁠  ⁠Best AP achieved: 0.6493
+
+
+## Key Observations
+
+•⁠  ⁠Pixel-level reconstruction error dominates anomaly ranking.
+•⁠  ⁠Feature-only scoring degrades performance on noise-heavy anomalies.
+•⁠  ⁠Gamma scaling above 1.3 leads to ranking instability.
+•⁠  ⁠Per-video normalization consistently reduces AP.
+
+
+## Stability Notes
+
+•⁠  ⁠Results are sensitive to scoring balance but stable across multiple runs with fixed seed.
+•⁠  ⁠Small parameter changes can cause large AP drops, indicating proximity to the model’s ceiling.
+
+•⁠  ⁠## Limitations and Future Work
+
+•⁠  ⁠The model operates on single frames and cannot capture motion-based anomalies.
+•⁠  ⁠Optical flow and temporal modeling were not explored due to time constraints.
+•⁠  ⁠The approach struggles with subtle semantic anomalies requiring context.
+•⁠  ⁠Future work would include temporal autoencoders or video transformers.
