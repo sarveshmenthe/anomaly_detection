@@ -93,21 +93,7 @@ This project confirms that single-frame spatial autoencoders:
   Multi-frame supervision
   These were not pursued due to time constraints and competition scope.
 
-anomaly-detection/
-│
-├── training_notebook.ipynb
-│   └── ResNet-18 autoencoder training (Seed = 82)
-│
-├── inference_notebook.ipynb
-│   └── TTA-based inference, scoring, and submission generation
-│
-├── models/
-│   └── resnet18_autoencoder_seed82.pth
-│
-├── experiments/
-│   └── failure_analysis.md
-│
-└── README.md
+
 
 . Conclusion .
 
@@ -120,3 +106,7 @@ Controlled experimentation
 Honest failure analysis
 Awareness of model limitations
 These lessons are directly transferable to more advanced temporal and multimodal anomaly detection research.
+ ⁠Fixed random seed: 82
+ ⁠Training performed on normal frames only
+ ⁠No test-time normalization or threshold tuning
+ ⁠All results reproducible using the provided notebooks
